@@ -1,21 +1,6 @@
-FROM node:6.2.0-slim
+FROM nginx:latest
 
-WORKDIR /usr/src/app
-
-# ENV NODE_ENV=test
-
-# Update aptitude with new repo
-# RUN apt-get update
-
-# Install software
-# RUN apt-get install -y git
-
-COPY . .
-
-RUN npm install -q
-
-RUN npm run install-typings && npm test
-
-RUN npm run build
-
-CMD ["npm", "start"]
+ENV NGINX_HTTP_PORT=$PORT
+#EXPOSE $PORT
+COPY nginx /etc/nginx/conf.d/
+COPY build /usr/share/nginx/html/

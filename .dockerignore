@@ -1,7 +1,3 @@
-.*ignore
-Dockerfile
-.git
-circle.yml
-build
-node_modules
-typings
+*
+!build
+!nginx
