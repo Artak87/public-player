@@ -1,7 +1,7 @@
 import * as React from "react";
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import Slider from 'material-ui/Slider';
-import PlayArrow from 'material-ui/svg-icons/av/play-arrow';
+import SendIcon from 'material-ui/svg-icons/content/send';
 import Pause from 'material-ui/svg-icons/av/pause';
 import {AudioPlayer} from '../component/AudioPlayer';
 import TextField from 'material-ui/TextField';
@@ -17,7 +17,12 @@ const style = {
 	item: {
 		margin: "4px",
 		padding: "4px",
-	}
+	},
+  sendIcon: {
+    position: "absolute",
+    right: "0",
+    bottom: "12px",
+  },
 };
 
 
@@ -79,7 +84,7 @@ export class ListPage extends React.Component<IListPageProps, IListPageState> {
 	     			hintText="Write your name"
 	    			fullWidth={true}
 	   			/>
-	   			<PlayArrow />
+	   			<SendIcon style={style.sendIcon} />
    			</form>
 			</div>
 		);
