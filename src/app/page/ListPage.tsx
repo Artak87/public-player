@@ -37,6 +37,7 @@ interface IListPageState {
 export class ListPage extends React.Component<IListPageProps, IListPageState> {
 
 	private textField: TextField;
+	private form: any;
 	private list: any[] = [];
 
 
@@ -47,12 +48,12 @@ export class ListPage extends React.Component<IListPageProps, IListPageState> {
 		};
 	}
 
-	private handelFormSubmit(event: any): boolean {
+	private handelFormSubmit(): boolean {
 		const value: any = this.textField.getValue();
 		if (!value) {
 			return false;
 		}
-		event.target.reset();
+		this.form.reset();
 		if (this.list.indexOf(value) !== -1) {
 			return false;
 		}
@@ -77,14 +78,18 @@ export class ListPage extends React.Component<IListPageProps, IListPageState> {
 			{list}
 			<form
 				style={style.form}
-				onSubmit={(event: any) => this.handelFormSubmit(event)}
+				ref={form => this.form = form}
+				onSubmit={() => this.handelFormSubmit()}
 			>
 				<TextField
 					ref={textField => this.textField = textField}
 	     			hintText="Write your name"
 	    			fullWidth={true}
 	   			/>
-	   			<SendIcon style={style.sendIcon} />
+	   			<SendIcon
+						style={style.sendIcon}
+						onTouchTap={() => this.handelFormSubmit()}
+					/>
    			</form>
 			</div>
 		);
