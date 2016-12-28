@@ -33,3 +33,5 @@ deployment:
       - sudo /opt/google-cloud-sdk/bin/kubectl apply -f kubernetes/deployment.yaml
       - sudo /opt/google-cloud-sdk/bin/kubectl apply -f kubernetes/service.yaml
       - sudo /opt/google-cloud-sdk/bin/kubectl patch deployment trainer-admin-frontend -p '{"spec":{"template":{"spec":{"containers":[{"name":"trainer-admin-frontend","image":"gcr.io/valued-bastion-137423/trainer-admin-frontend:'"$CIRCLE_SHA1"'"}]}}}}'
+
+# docker run --name public-player -p 80:80 -i -t public-player:v0.1
