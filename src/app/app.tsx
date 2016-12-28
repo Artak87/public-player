@@ -7,6 +7,7 @@ import {Player} from "./Player";
 import {PlayerPage} from "./page/PlayerPage";
 import {ListPage} from "./page/ListPage";
 import {SearchPage} from "./page/SearchPage";
+import {ClockPage} from "./page/ClockPage";
 
 injectTapEventPlugin();
 
@@ -22,6 +23,7 @@ ReactDom.render(
         	<IndexRoute component={SearchPage}/>
         	<Route path="player" component={PlayerPage}/>
         	<Route path="list" component={ListPage}/>
+            <Route path="clock" component={ClockPage}/>
         </Route>
     </Router>,
     document.getElementById("app")
