@@ -21,8 +21,11 @@ deployment:
   gcloud:
     branch: master
     commands:
-      - docker stop public-player
-      - docker rm public-player
-      - docker rmi public-player:v0.1
-      - docker build -t public-player:v0.1 .
-      - docker run --name public-player -p 80:80 -i -t public-player:v0.1
+      - docker ps
+      - docker images
+      - sudo docker ps
+      - sudo docker images
+#      - docker rm public-player
+#      - docker rmi public-player:v0.1
+#      - docker build -t public-player:v0.1 .
+#      - docker run --name public-player -p 80:80 -i -t public-player:v0.1
