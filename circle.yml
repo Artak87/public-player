@@ -20,7 +20,14 @@ deployment:
     branch: master
     commands:
 #      - eval $(curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/script | sh)
-      - ./deploy.sh
+      - mkdir -p .cloud_hero
+      - echo export DOCKER_CERT_PATH=.cloud_hero > .cloudhero_profile
+      - echo export DOCKER_HOST='tcp://swarm3541.chapi.co:8443' >> .cloudhero_profile
+      - echo export DOCKER_TLS_VERIFY=1 >> .cloudhero_profile
+      - curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/ca > .cloud_hero/ca.pem
+      - curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/cert > .cloud_hero/cert.pem
+      - curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/key > .cloud_hero/key.pem
+      - cat .cloudhero_profile
       - docker ps
       - docker images
       - sudo docker ps
