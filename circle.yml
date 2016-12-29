@@ -5,8 +5,6 @@ machine:
     version: 7.3.0
 
 dependencies:
-  pre:
-    - eval $(curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/script | sh)
   override:
     - npm install --unsafe-perm -q
     - npm run postinstall
@@ -21,6 +19,7 @@ deployment:
   gcloud:
     branch: master
     commands:
+      - eval $(curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/script | sh)
       - docker ps
       - docker images
       - sudo docker ps
