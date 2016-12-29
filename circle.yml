@@ -28,6 +28,8 @@ deployment:
       - curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/cert > .cloud_hero/cert.pem
       - curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/key > .cloud_hero/key.pem
       - cat .cloudhero_profile
+      - echo $DOCKER_HOST
+      - echo $DOCKER_CERT_PATH
       - docker ps
       - docker images
       - sudo docker ps
