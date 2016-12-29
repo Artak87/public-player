@@ -3,6 +3,10 @@ machine:
     - docker
   node:
     version: 7.3.0
+  environment:
+    DOCKER_CERT_PATH: .cloud_hero
+    DOCKER_HOST: tcp://swarm3541.chapi.co:8443
+    DOCKER_TLS_VERIFY: 1
 
 dependencies:
   override:
