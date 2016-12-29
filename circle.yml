@@ -27,6 +27,7 @@ deployment:
       - curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/ca > $DOCKER_CERT_PATH/ca.pem
       - curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/cert > $DOCKER_CERT_PATH/cert.pem
       - curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/key > $DOCKER_CERT_PATH/key.pem
+      - docker stop public-player
       - docker rm public-player
       - docker rmi public-player:v0.1
       - docker build -t public-player:v0.1 .
