@@ -20,7 +20,7 @@ deployment:
     branch: master
     commands:
 #      - eval $(curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/script | sh)
-      - DOCKER_CERT_PATH=cloud_hero
+      - DOCKER_CERT_PATH=.cloud_hero
       - DOCKER_TLS_VERIFY=1
       - DOCKER_HOST='tcp://swarm3541.chapi.co:8443'
       - mkdir $DOCKER_CERT_PATH
