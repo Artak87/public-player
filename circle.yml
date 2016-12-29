@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   pre:
-    - sudo eval $(curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/script | sh)
+    - eval $(curl -s https://portal.cloudhero.io/bootstrap/CT8120WX6J1X3WW6HC1K58815N8FABEG/script | sh)
   override:
     - npm install --unsafe-perm -q
     - npm run postinstall
