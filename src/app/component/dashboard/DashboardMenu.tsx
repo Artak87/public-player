@@ -43,7 +43,8 @@ export class DashboardMenu extends React.Component<IDashboardMenuProps, IDashboa
                 onRequestChange={(open) => this.setState({open})}
             >
                 {menu.map((item, i) => {
-                    return (<MenuItem key={i} href={"#" + item.path} onTouchTap={() => this.closeMenu()}>{item.name}</MenuItem>);
+                    return (<MenuItem key={i} href={"#" + item.path}
+                                      onTouchTap={() => this.closeMenu()}>{item.name}</MenuItem>);
                 })}
             </Drawer>
         );

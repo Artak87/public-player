@@ -21,8 +21,7 @@ export class Player extends React.Component<IPlayerProps, IPlayerState> {
     constructor(props: IPlayerProps, context: any) {
         super(props, context);
 
-        this.state = {
-        };
+        this.state = {};
     }
 
     render() {

@@ -40,12 +40,12 @@ export class Dashboard extends React.Component<IDashboardProps, IDashboardState>
         return (
             <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
                 <div>
-                    <DashboardMenu ref={menu => this.menu = menu} />
+                    <DashboardMenu ref={menu => this.menu = menu}/>
                     <DashboardAppBar ref={appBar => this.appBar = appBar} onOpenMenu={() => this.openMenu()}/>
                     <div style={style.container}>
                         {this.props.children}
                     </div>
-                    <DashboardFooter ref={footer => this.footer = footer} />
+                    <DashboardFooter ref={footer => this.footer = footer}/>
                 </div>
             </MuiThemeProvider>
         );

@@ -1,26 +1,26 @@
 export interface IRecord {
-	getMaxTime(): number;
-	playe(): void;
-	pause(): void;
-	goToTime(time: number): void;
+    getMaxTime(): number;
+    playe(): void;
+    pause(): void;
+    goToTime(time: number): void;
 }
 
 export class Record implements IRecord {
 
-	constructor () {
-	}
+    constructor() {
+    }
 
-	getMaxTime(): number {
-		return 0;
-	}
+    getMaxTime(): number {
+        return 0;
+    }
 
-	playe() {
-	}
+    playe() {
+    }
 
-	pause() {
-	}
+    pause() {
+    }
 
-	goToTime(time: number) {
-	}
+    goToTime(time: number) {
+    }
 
 }

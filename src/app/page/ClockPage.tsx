@@ -10,18 +10,17 @@ interface IClockPageState {
 export class ClockPage extends React.Component<IClockPageProps, IClockPageState> {
 
 
-	constructor(props: IClockPageProps, context: any) {
-		super(props, context);
-		this.state = {
-		};
-	}
+    constructor(props: IClockPageProps, context: any) {
+        super(props, context);
+        this.state = {};
+    }
 
 
-	render() {
-		return (
-			<div>
-				<Clock/>
-			</div>
-		);
-	}
+    render() {
+        return (
+            <div>
+                <Clock/>
+            </div>
+        );
+    }
 }

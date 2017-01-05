@@ -11,18 +11,18 @@ import {ClockPage} from "./page/ClockPage";
 
 injectTapEventPlugin();
 
-        // <Route path="/" component={Dashboard}>
-        //     <IndexRoute component={DashboardPage}/>
-        //     <Route path="issues" component={IssuePage}/>
-        //     <Route path="users-statistics" component={UsersStatisticsPage}/>
-        // </Route>
+// <Route path="/" component={Dashboard}>
+//     <IndexRoute component={DashboardPage}/>
+//     <Route path="issues" component={IssuePage}/>
+//     <Route path="users-statistics" component={UsersStatisticsPage}/>
+// </Route>
 
 ReactDom.render(
     <Router history={hashHistory}>
         <Route path="/" component={Player}>
-        	<IndexRoute component={SearchPage}/>
-        	<Route path="player" component={PlayerPage}/>
-        	<Route path="list" component={ListPage}/>
+            <IndexRoute component={SearchPage}/>
+            <Route path="player" component={PlayerPage}/>
+            <Route path="list" component={ListPage}/>
             <Route path="clock" component={ClockPage}/>
         </Route>
     </Router>,

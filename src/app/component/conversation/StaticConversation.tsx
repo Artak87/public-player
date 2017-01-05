@@ -24,8 +24,10 @@ export class StaticConversation extends React.Component<IStaticConversationProps
     render() {
         const chatItem: any = [];
         this.state.conversation.forEach((item: any, i: number) => {
-            chatItem.push(<div key={i} ><ChatItem data={item} me={false}>{item.userMessage}</ChatItem></div>);
-            chatItem.push(<div key={this.state.conversation.length + i} ><ChatItem data={item} me={true}>{item.botMessage}</ChatItem></div>);
+            chatItem.push(<div key={i}><ChatItem data={item} me={false}>{item.userMessage}</ChatItem></div>);
+            chatItem.push(<div key={this.state.conversation.length + i}><ChatItem data={item}
+                                                                                  me={true}>{item.botMessage}</ChatItem>
+            </div>);
         });
         return (<div>{chatItem}</div>);
     }
