@@ -44,13 +44,13 @@ export class Symbol extends React.Component<ISymbolProps, ISymbolState> {
         };
     }
 
-    setNumber(number: number) {
-        this.setState({number: number});
+    setNumber(n: number) {
+        this.setState({number: n});
     }
 
     render() {
         const blocks: any[] = [];
-        for (var i = 1; i < 10; ++i) {
+        for (let i = 1; i < 10; ++i) {
             const bStyle = i <= this.state.number ? style.on : style.off;
             blocks.push(<div key={i} style={bStyle}></div>);
         }

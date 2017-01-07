@@ -18,9 +18,9 @@ export class TwoSymbol extends React.Component<ITwoSymbolProps, ITwoSymbolState>
         this.state = {};
     }
 
-    setNumber(number: number) {
-        const first = Math.floor(number / 10);
-        const second = number % 10;
+    setNumber(n: number) {
+        const first = Math.floor(n / 10);
+        const second = n % 10;
         this.firstSymbol.setNumber(first);
         this.secondSymbol.setNumber(second);
     }
